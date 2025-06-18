@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* v4에서는 @theme 디렉티브 사용 */
+@theme {
+  --font-family-sans: "Inter", system-ui, sans-serif;
+
+  /* 커스텀 색상 */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-900: #1e3a8a;
+
+  /* 커스텀 애니메이션 */
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
+
+  /* 커스텀 스페이싱 */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+}
+
+/* 키프레임 애니메이션 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 기본 스타일 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 컴포넌트 클래스 */
+@layer components {
+  .btn-primary {
+    @apply bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2 font-medium;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2 font-medium;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/90 backdrop-blur-sm border border-white/20 shadow-xl;
+  }
+}
+
+/* 유틸리티 클래스 */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .animate-fade-in {
+    animation: var(--animate-fade-in);
+  }
+
+  .animate-slide-up {
+    animation: var(--animate-slide-up);
+  }
+
+  .animate-scale-in {
+    animation: var(--animate-scale-in);
+  }
+}
