@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://your-username.github.io/shuveloperpage",
+  "homepage": "https://Shu-Veloper.github.io/shuveloperpage",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
