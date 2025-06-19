@@ -12,15 +12,36 @@ import {
   Smartphone,
   Globe,
   Star,
+  Menu,
   Calendar,
   ArrowRight,
+  X,
 } from "lucide-react";
 import { personalInfo, projects, skills } from "../data/portfolioData";
+
+// 메뉴 아이템들
+const menuItems = [
+  { href: "#about", label: "プロフィール" },
+  { href: "#portfolio", label: "ポートフォリオ" },
+  { href: "#skills", label: "スキル" },
+  { href: "#contact", label: "お問い合わせ" },
+];
 
 const PortfolioSite = () => {
   const [currentProject, setCurrentProject] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("web");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // 모바일 메뉴 토글
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // 메뉴 아이템 클릭 시 모바일 메뉴 닫기
+  const handleMenuClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     setIsVisible(true);
@@ -51,32 +72,56 @@ const PortfolioSite = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-bold text-xl text-gray-900">shuveloper</div>
-            <div className="flex items-center space-x-6">
-              <a
-                href="#about"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                プロフィール
-              </a>
-              <a
-                href="#portfolio"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                ポートフォリオ
-              </a>
-              <a
-                href="#skills"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                スキル
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                お問い合わせ
-              </a>
+
+            {/* デスクトップメニュー */}
+            <div className="hidden md:flex items-center space-x-6">
+              {menuItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
+
+            {/* モバイルメニューボタン */}
+            <div className="md:hidden">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-gray-600 hover:text-gray-900 transition-colors p-2"
+                aria-label="メニューを開く"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* モバイルメニュー */}
+        <div
+          className={`md:hidden bg-white border-t border-gray-100 transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-64 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
+        >
+          <div className="px-4 py-2 space-y-1">
+            {menuItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={handleMenuClick}
+                className="block px-3 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
       </nav>
