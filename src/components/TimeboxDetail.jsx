@@ -257,7 +257,7 @@ const TimeboxDetail = () => {
   return (
     <div style={styles.container}>
       <button style={styles.backButton} onClick={() => window.history.back()}>
-        ← ポートフォリオに戻る
+        ← ホームに戻る
       </button>
 
       <header style={styles.header}>
