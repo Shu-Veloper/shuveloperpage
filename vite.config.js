@@ -7,6 +7,12 @@ export default defineConfig({
   base: "/shuveloperpage",
   build: {
     outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        404: "404.html", // 404.html도 빌드에 포함
+      },
+    },
   },
   server: {
     port: 3000,

@@ -8,7 +8,7 @@ import TimeboxDetail from "./components/TimeboxDetail";
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter basename="/shuveloperpage">
         <Routes>
           <Route path="/" element={<PortfolioSite />} />
           <Route path="/timebox/detail" element={<TimeboxDetail />} />
@@ -22,7 +22,7 @@ function App() {
           />
           <Route path="*" element={<h1>Not Found Page</h1>} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
