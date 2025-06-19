@@ -202,7 +202,7 @@ const PortfolioSite = () => {
                     <h4 className="font-semibold text-gray-900">
                       フルスタック開発者
                     </h4>
-                    <p className="text-gray-600">2020年 - 現在</p>
+                    <p className="text-gray-600">2023年 - 現在</p>
                     <p className="text-gray-700 mt-2">
                       Webアプリケーションとモバイルアプリの開発に従事。React、Node.js、React
                       Nativeを中心とした技術スタックで多数のプロジェクトを手がける。
@@ -496,7 +496,7 @@ const PortfolioSite = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">メール</h4>
-                    <p className="text-gray-600">contact@shuveloper.com</p>
+                    <p className="text-gray-600">shuveloper0308@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -505,7 +505,7 @@ const PortfolioSite = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">電話</h4>
-                    <p className="text-gray-600">+81-90-1234-5678</p>
+                    <p className="text-gray-600">+81-</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -514,7 +514,7 @@ const PortfolioSite = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">所在地</h4>
-                    <p className="text-gray-600">東京都渋谷区初台</p>
+                    <p className="text-gray-600">東京都世田谷区</p>
                   </div>
                 </div>
               </div>
