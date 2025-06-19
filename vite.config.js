@@ -4,13 +4,14 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/shuveloperpage",
+  base: "/shuveloperpage/",
   build: {
     outDir: "dist",
+    // rollupOptions에서 404 제거
     rollupOptions: {
       input: {
         main: "index.html",
-        404: "404.html", // 404.html도 빌드에 포함
+        // 404: "404.html", // 이 줄 제거
       },
     },
   },
