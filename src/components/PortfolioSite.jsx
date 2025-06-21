@@ -30,7 +30,7 @@ const menuItems = [
 const PortfolioSite = () => {
   const [currentProject, setCurrentProject] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState("web");
+  const [activeTab, setActiveTab] = useState("mobile");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // 모바일 메뉴 토글
@@ -215,7 +215,7 @@ const PortfolioSite = () => {
                     <h4 className="font-semibold text-gray-900">
                       フロントエンド開発者
                     </h4>
-                    <p className="text-gray-600">2018年 - 2020年</p>
+                    <p className="text-gray-600">2023年 - 現在</p>
                     <p className="text-gray-700 mt-2">
                       ユーザーインターフェースの設計と実装を専門とし、レスポンシブWebデザインとモダンJavaScriptフレームワークの習得。
                     </p>
@@ -281,7 +281,7 @@ const PortfolioSite = () => {
           {/* タブナビゲーション */}
           <div className="flex justify-center mb-12">
             <div className="bg-gray-100 rounded-lg p-1">
-              <button
+              {/* <button
                 onClick={() => setActiveTab("web")}
                 className={`px-6 py-3 rounded-lg transition-all ${
                   activeTab === "web"
@@ -291,7 +291,7 @@ const PortfolioSite = () => {
               >
                 <Globe className="w-5 h-5 inline-block mr-2" />
                 Webアプリ
-              </button>
+              </button> */}
               <button
                 onClick={() => setActiveTab("mobile")}
                 className={`px-6 py-3 rounded-lg transition-all ${
