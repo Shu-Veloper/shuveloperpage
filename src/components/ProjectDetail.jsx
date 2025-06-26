@@ -44,7 +44,7 @@ const ProjectDetail = ({ projectData }) => {
         {/* Image Section */}
         <div className="static md:sticky md:top-5 order-1">
           <div className="relative bg-white rounded-xl md:rounded-2xl p-5 md:p-8 shadow-xl overflow-hidden">
-            <div className="relative w-full h-full md:w-75 md:h-175 mx-auto bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative w-1/2 h-full md:w-full mx-auto bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={projectData.screenshots[currentImageIndex].src}
                 alt={projectData.screenshots[currentImageIndex].title}
