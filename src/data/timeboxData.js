@@ -2,7 +2,8 @@ import timeboxMain from "../assets/images/timebox-main.png";
 import timeboxCalendar from "../assets/images/timebox-calendar.png";
 import timeboxSettings from "../assets/images/timebox-settings.png";
 export const timeboxData = {
-  title: "タイムボックス",
+  title: "時間割プラナー",
+  slug: "timebox",
   category: "モバイルアプリ",
   description:
     "日々のスケジュール管理とタスク追跡を効率化するモバイルアプリ。直感的なUIで時間管理を最適化し、目標達成をサポートします。",

@@ -21,6 +21,10 @@
   /* 커스텀 스페이싱 */
   --spacing-18: 4.5rem;
   --spacing-22: 5.5rem;
+  --spacing-75: 18.75rem; /* 300px */
+  --spacing-175: 43.75rem; /* 700px */
+  --spacing-62: 15.5rem; /* 248px */
+  --spacing-125: 31.25rem; /* 500px */
 }
 
 /* 키프레임 애니메이션 */
@@ -117,5 +121,46 @@ body {
 
   .animate-scale-in {
     animation: var(--animate-scale-in);
+  }
+
+  /* 커스텀 너비/높이 */
+  .w-75 {
+    width: var(--spacing-75);
+  }
+
+  .h-175 {
+    height: var(--spacing-175);
+  }
+
+  .w-62 {
+    width: var(--spacing-62);
+  }
+
+  .h-125 {
+    height: var(--spacing-125);
+  }
+
+  /* 커스텀 그리드 */
+  .grid-cols-auto-fit-30 {
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  }
+
+  .grid-cols-auto-fit-25 {
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+  }
+
+  .grid-cols-auto-fit-62 {
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  }
+
+  /* 커스텀 스케일 */
+  .scale-120 {
+    transform: scale(1.2);
+  }
+
+  /* 텍스트 크기 */
+  .text-xxs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
   }
 }
