@@ -1,9 +1,6 @@
 import "./index.css";
 import PortfolioSite from "./components/PortfolioSite";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import TimeboxPrivacyPolicy from "./components/TimeboxPrivacyPolicy";
-import TimeboxTermsOfService from "./components/TimeboxTermsOfService";
-import TimeboxDetail from "./components/TimeboxDetail";
 import { timeboxData } from "./data/timeboxData";
 import ProjectDetail from "./components/ProjectDetail";
 import { timeboxPrivacyPolicyData } from "./data/timeboxPrivacyPolicyData";
