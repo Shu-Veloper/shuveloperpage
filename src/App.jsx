@@ -6,26 +6,30 @@ import TimeboxTermsOfService from "./components/TimeboxTermsOfService";
 import TimeboxDetail from "./components/TimeboxDetail";
 import { timeboxData } from "./data/timeboxData";
 import ProjectDetail from "./components/ProjectDetail";
+import { timeboxPrivacyPolicyData } from "./data/timeboxPrivacyPolicyData";
+import { timeboxTermsOfServiceData } from "./data/timeboxTermsOfServiceData";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsOfService from "./components/TermsOfService";
 
 function App() {
-  // const timebox = timeboxData;
+  const basename =
+    import.meta.env.MODE === "production" ? "/shuveloperpage" : "";
   return (
     <>
-      <BrowserRouter basename="/shuveloperpage">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<PortfolioSite />} />
-          {/* <Route path={`/${timebox.slug}/detail`} element={<TimeboxDetail />} /> */}
           <Route
             path={`/${timeboxData.slug}/detail`}
             element={<ProjectDetail projectData={timeboxData} />}
           />
           <Route
             path="/timebox/privacypolicy"
-            element={<TimeboxPrivacyPolicy />}
+            element={<PrivacyPolicy data={timeboxPrivacyPolicyData} />}
           />
           <Route
             path="/timebox/termsofservice"
-            element={<TimeboxTermsOfService />}
+            element={<TermsOfService data={timeboxTermsOfServiceData} />}
           />
           <Route path="*" element={<h1>Not Found Page</h1>} />
         </Routes>

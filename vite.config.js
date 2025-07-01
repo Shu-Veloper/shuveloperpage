@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+export default defineConfig((mode) => ({
   plugins: [react(), tailwindcss()],
-  base: "/shuveloperpage/",
+  base: mode === "production" ? "/shuveloperpage/" : "/",
   build: {
     outDir: "dist",
     // rollupOptions에서 404 제거
@@ -19,4 +19,4 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-});
+}));
