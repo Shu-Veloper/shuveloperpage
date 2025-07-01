@@ -11,6 +11,7 @@ import TermsOfService from "./components/TermsOfService";
 function App() {
   const basename =
     import.meta.env.MODE === "production" ? "/shuveloperpage" : "";
+  console.log("@@@ basename:", basename);
   return (
     <>
       <BrowserRouter basename={basename}>
