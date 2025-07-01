@@ -2,16 +2,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig((mode) => ({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
   base: mode === "production" ? "/shuveloperpage/" : "/",
   build: {
     outDir: "dist",
-    // rollupOptions에서 404 제거
     rollupOptions: {
       input: {
         main: "index.html",
-        // 404: "404.html", // 이 줄 제거
       },
     },
   },
