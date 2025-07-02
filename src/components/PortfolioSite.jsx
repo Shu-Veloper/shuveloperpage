@@ -145,7 +145,7 @@ const PortfolioSite = () => {
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                   モバイルアプリからWebアプリケーションまで、
                   <br />
-                  ユーザー体験を重視した開発を行っています。
+                  課題を見つけ出し、解決に向けて取り組んでいます。
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                   <a
@@ -444,6 +444,8 @@ const PortfolioSite = () => {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 "React",
+                "React-Native",
+                "NextJs",
                 "Vue.js",
                 "Node.js",
                 "Python",
@@ -451,7 +453,6 @@ const PortfolioSite = () => {
                 "TypeScript",
                 "React Native",
                 "Flutter",
-                "Swift",
                 "MongoDB",
                 "PostgreSQL",
                 "Firebase",
@@ -460,7 +461,6 @@ const PortfolioSite = () => {
                 "Git",
                 "Figma",
                 "Adobe XD",
-                "Sketch",
               ].map((tool, index) => (
                 <span
                   key={index}
@@ -484,115 +484,121 @@ const PortfolioSite = () => {
             <p className="text-xl text-gray-600">お気軽にご連絡ください</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="max-w-3xl mx-auto">
+            {/* 연락처 정보 카드 */}
+            <div className="bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
                 連絡先情報
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-gray-700" />
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* 메인 연락처 */}
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                      <Mail className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-lg">
+                        メール
+                      </h4>
+                      <a
+                        href="mailto:shuveloper0308@gmail.com"
+                        className="text-blue-600 hover:text-blue-700 transition-colors text-sm md:text-base"
+                      >
+                        shuveloper0308@gmail.com
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">メール</h4>
-                    <p className="text-gray-600">shuveloper0308@gmail.com</p>
+
+                  {/* <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                      <Phone className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-lg">
+                        電話
+                      </h4>
+                      <p className="text-gray-600">+81-XXX-XXXX-XXXX</p>
+                    </div>
+                  </div> */}
+
+                  <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                      <MapPin className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-lg">
+                        所在地
+                      </h4>
+                      <p className="text-gray-600">東京都世田谷区</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-gray-700" />
+
+                {/* SNS 및 추가 정보 */}
+                <div className="space-y-6">
+                  <div className="p-6 bg-white rounded-xl shadow-sm">
+                    <h4 className="font-semibold text-gray-900 mb-4 text-lg">
+                      SNS・リンク
+                    </h4>
+                    <div className="flex space-x-4 mb-6">
+                      <a
+                        href={personalInfo.social.github}
+                        className="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center hover:bg-gray-800 transition-all hover:scale-110 shadow-md"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-6 h-6" />
+                      </a>
+                      <a
+                        href="mailto:shuveloper0308@gmail.com"
+                        className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-110 shadow-md"
+                      >
+                        <Mail className="w-6 h-6" />
+                      </a>
+                    </div>
+
+                    {/* 추가 메시지 */}
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        プロジェクトのご相談や技術的なお話など、
+                        <br />
+                        どんなことでもお気軽にお声がけください。
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">電話</h4>
-                    <p className="text-gray-600">+81-</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-gray-700" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">所在地</h4>
-                    <p className="text-gray-600">東京都世田谷区</p>
+
+                  {/* 응답 시간 안내 */}
+                  <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+                    <div className="flex items-center space-x-3 mb-3">
+                      <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <Calendar className="w-4 h-4 text-white" />
+                      </div>
+                      <h4 className="font-semibold text-gray-900">
+                        返信について
+                      </h4>
+                    </div>
+                    <p className="text-gray-700 text-sm">
+                      通常、24時間以内にお返事いたします。
+                      <br />
+                      お急ぎの場合は直接メールでご連絡ください。
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8">
-                <h4 className="font-semibold text-gray-900 mb-4">
-                  SNS・リンク
-                </h4>
-                <div className="flex space-x-4">
-                  <a
-                    href={personalInfo.social.github}
-                    className="w-10 h-10 bg-gray-900 text-white rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={personalInfo.social.email}
-                    className="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                メッセージを送る
-              </h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    お名前
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                    placeholder="山田太郎"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    メールアドレス
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                    placeholder="example@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    件名
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                    placeholder="お問い合わせ内容"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    メッセージ
-                  </label>
-                  <textarea
-                    rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                    placeholder="お気軽にメッセージをお送りください..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2"
+              {/* 하단 CTA */}
+              <div className="mt-10 text-center">
+                <a
+                  href="mailto:shuveloper0308@gmail.com?subject=お問い合わせ"
+                  className="inline-flex items-center space-x-3 bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all hover:scale-105 shadow-lg"
                 >
-                  <span>送信する</span>
+                  <Mail className="w-5 h-5" />
+                  <span className="font-medium">今すぐメールを送る</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
-              </form>
+                </a>
+              </div>
             </div>
           </div>
         </div>
