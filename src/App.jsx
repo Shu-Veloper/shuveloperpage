@@ -25,7 +25,7 @@ function App() {
             element={<ProjectDetail projectData={timeboxData} />}
           />
           <Route
-            path={`/${campusLinkData.slug}/detail`}
+            path={`/${campusLinkData.link}/detail`}
             element={<ProjectDetail projectData={campusLinkData} />}
           />
           <Route
