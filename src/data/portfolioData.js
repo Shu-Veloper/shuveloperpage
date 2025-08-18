@@ -21,9 +21,9 @@ export const projects = {
     {
       id: 4,
       title: "タイムボックス",
+      slug: "timebox",
       category: "モバイルアプリ",
       image: applicationicon, // 첫 번째 이미지 경로
-      link: "timebox",
       description:
         "日々のスケジュール管理とタスク追跡を効率化するモバイルアプリ。直感的なUIで時間管理を最適化し、目標達成をサポートします。",
       tech: ["React Native", "JavaScript", "AsyncStorage", "Calendar API"],
@@ -42,9 +42,9 @@ export const projects = {
     {
       id: 5,
       title: "キャンパスリンク",
+      slug: "campuslink",
       category: "モバイルアプリ",
       image: null,
-      link: "campuslink",
       description:
         "大学内での新しい出会いとつながりを促進するマッチングアプリ。同じキャンパス内の学生同士が安全で楽しいコミュニケーションを楽しめます。",
       tech: ["Flutter", "Dart", "Firebase"],
