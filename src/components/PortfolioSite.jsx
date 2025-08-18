@@ -341,7 +341,7 @@ const PortfolioSite = () => {
                     </div>
                     <div className="flex justify-center space-x-4">
                       <a
-                        href="/shuveloperpage/timebox/detail"
+                        href={`/${currentProjects[currentProject].link}/detail`}
                         className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:border-gray-400 transition-colors flex items-center space-x-2"
                       >
                         <span>詳細</span>

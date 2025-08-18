@@ -2,9 +2,12 @@ import "./index.css";
 import PortfolioSite from "./components/PortfolioSite";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { timeboxData } from "./data/timeboxData";
+import { campusLinkData } from "./data/mobile/campuslink/campusLinkData";
 import ProjectDetail from "./components/ProjectDetail";
 import { timeboxPrivacyPolicyData } from "./data/timeboxPrivacyPolicyData";
 import { timeboxTermsOfServiceData } from "./data/timeboxTermsOfServiceData";
+import { campusLinkPrivacyPolicyData } from "./data/mobile/campuslink/campusLinkPrivacyPolicyData";
+import { campusLinkTermsOfServiceData } from "./data/mobile/campuslink/campusLinkTermsOfServiceData";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfService from "./components/TermsOfService";
 
@@ -22,12 +25,24 @@ function App() {
             element={<ProjectDetail projectData={timeboxData} />}
           />
           <Route
+            path={`/${campusLinkData.slug}/detail`}
+            element={<ProjectDetail projectData={campusLinkData} />}
+          />
+          <Route
             path="/timebox/privacypolicy"
             element={<PrivacyPolicy data={timeboxPrivacyPolicyData} />}
           />
           <Route
             path="/timebox/termsofservice"
             element={<TermsOfService data={timeboxTermsOfServiceData} />}
+          />
+          <Route
+            path="/campuslink/privacypolicy"
+            element={<PrivacyPolicy data={campusLinkPrivacyPolicyData} />}
+          />
+          <Route
+            path="/campuslink/termsofservice"
+            element={<TermsOfService data={campusLinkTermsOfServiceData} />}
           />
           <Route path="*" element={<h1>Not Found Page</h1>} />
         </Routes>
