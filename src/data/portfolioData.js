@@ -2,12 +2,12 @@ import timeboxMain from "../assets/images/timebox-main.png";
 import timeboxCalendar from "../assets/images/timebox-calendar.png";
 import timeboxSettings from "../assets/images/timebox-settings.png";
 import applicationicon from "../assets/images/applicationicon.png";
-import campuslink1 from "../../../assets/images/campuslink/campuslink1.png";
-import campuslink2 from "../../../assets/images/campuslink/campuslink2.png";
-import campuslink3 from "../../../assets/images/campuslink/campuslink3.png";
-import campuslink4 from "../../../assets/images/campuslink/campuslink4.png";
-import campuslink5 from "../../../assets/images/campuslink/campuslink5.png";
-import campuslink6 from "../../../assets/images/campuslink/campuslink6.png";
+import campuslink1 from "../assets/images/campuslink/campuslink1.png";
+import campuslink2 from "../assets/images/campuslink/campuslink2.png";
+import campuslink3 from "../assets/images/campuslink/campuslink3.png";
+import campuslink4 from "../assets/images/campuslink/campuslink4.png";
+import campuslink5 from "../assets/images/campuslink/campuslink5.png";
+import campuslink6 from "../assets/images/campuslink/campuslink6.png";
 export const projects = {
   web: [
     {
