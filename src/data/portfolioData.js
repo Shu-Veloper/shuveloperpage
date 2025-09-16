@@ -2,6 +2,7 @@ import timeboxMain from "../assets/images/timebox-main.png";
 import timeboxCalendar from "../assets/images/timebox-calendar.png";
 import timeboxSettings from "../assets/images/timebox-settings.png";
 import applicationicon from "../assets/images/applicationicon.png";
+import campuslinkIcon from "../assets/images/campuslink/app_icon.png";
 import campuslink1 from "../assets/images/campuslink/campuslink1.png";
 import campuslink2 from "../assets/images/campuslink/campuslink2.png";
 import campuslink3 from "../assets/images/campuslink/campuslink3.png";
@@ -50,7 +51,7 @@ export const projects = {
       title: "キャンパスリンク",
       slug: "campuslink",
       category: "モバイルアプリ",
-      image: null,
+      image: campuslinkIcon,
       description:
         "大学内での新しい出会いとつながりを促進するマッチングアプリ。同じキャンパス内の学生同士が安全で楽しいコミュニケーションを楽しめます。",
       tech: ["Flutter", "Dart", "Firebase"],
