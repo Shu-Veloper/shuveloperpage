@@ -2,6 +2,12 @@ import timeboxMain from "../assets/images/timebox-main.png";
 import timeboxCalendar from "../assets/images/timebox-calendar.png";
 import timeboxSettings from "../assets/images/timebox-settings.png";
 import applicationicon from "../assets/images/applicationicon.png";
+import campuslink1 from "../../../assets/images/campuslink/campuslink1.png";
+import campuslink2 from "../../../assets/images/campuslink/campuslink2.png";
+import campuslink3 from "../../../assets/images/campuslink/campuslink3.png";
+import campuslink4 from "../../../assets/images/campuslink/campuslink4.png";
+import campuslink5 from "../../../assets/images/campuslink/campuslink5.png";
+import campuslink6 from "../../../assets/images/campuslink/campuslink6.png";
 export const projects = {
   web: [
     {
@@ -50,6 +56,21 @@ export const projects = {
       tech: ["Flutter", "Dart", "Firebase"],
       demo: "#",
       github: "#",
+      features: [
+        "掲示板",
+        "チャット機能",
+        "プロフィール管理",
+        "マッチング機能",
+        "授業管理",
+      ],
+      screenshots: [
+        campuslink1,
+        campuslink2,
+        campuslink3,
+        campuslink4,
+        campuslink5,
+        campuslink6,
+      ],
     },
   ],
 };

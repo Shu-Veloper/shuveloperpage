@@ -43,7 +43,7 @@ export const timeboxData = {
     },
   ],
   links: {
-    privacyPolicy: "/timebox/privacypolicy",
-    termsOfService: "/timebox/termsofservice",
+    privacyPolicy: "/shuveloperpage/timebox/privacypolicy",
+    termsOfService: "/shuveloperpage/timebox/termsofservice",
   },
 };

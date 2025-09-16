@@ -1,3 +1,10 @@
+import campuslink1 from "../../../assets/images/campuslink/campuslink1.png";
+import campuslink2 from "../../../assets/images/campuslink/campuslink2.png";
+import campuslink3 from "../../../assets/images/campuslink/campuslink3.png";
+import campuslink4 from "../../../assets/images/campuslink/campuslink4.png";
+import campuslink5 from "../../../assets/images/campuslink/campuslink5.png";
+import campuslink6 from "../../../assets/images/campuslink/campuslink6.png";
+
 export const campusLinkData = {
   title: "キャンパスリンク",
   slug: "campuslink",
@@ -25,23 +32,38 @@ export const campusLinkData = {
   ],
   screenshots: [
     {
-      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='600' viewBox='0 0 300 600'%3E%3Crect width='300' height='600' fill='%23f8f9fa'/%3E%3Crect x='20' y='50' width='260' height='60' rx='30' fill='%234f46e5'/%3E%3Ctext x='150' y='85' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3Eキャンパスリンク%3C/text%3E%3Ccircle cx='150' cy='200' r='60' fill='%23ddd6fe'/%3E%3Ctext x='150' y='280' text-anchor='middle' fill='%234f46e5' font-family='Arial' font-size='16' font-weight='bold'%3Eマッチング画面%3C/text%3E%3C/svg%3E",
+      src: campuslink1,
       title: "マッチング画面",
-      description: "相性スコアに基づいたユーザーとのマッチング",
+      description: "マッチング画面",
     },
     {
-      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='600' viewBox='0 0 300 600'%3E%3Crect width='300' height='600' fill='%23f8f9fa'/%3E%3Crect x='20' y='50' width='260' height='60' rx='30' fill='%234f46e5'/%3E%3Ctext x='150' y='85' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3Eチャット%3C/text%3E%3Crect x='30' y='150' width='180' height='40' rx='20' fill='%23e5e7eb'/%3E%3Ctext x='120' y='175' text-anchor='middle' fill='%23374151' font-family='Arial' font-size='14'%3Eこんにちは！%3C/text%3E%3Crect x='90' y='210' width='180' height='40' rx='20' fill='%234f46e5'/%3E%3Ctext x='180' y='235' text-anchor='middle' fill='white' font-family='Arial' font-size='14'%3Eよろしくお願いします%3C/text%3E%3C/svg%3E",
-      title: "チャット画面",
-      description: "マッチした相手との安全なメッセージ交換",
+      src: campuslink2,
+      title: "マッチング成功画面",
+      description: "マッチング成功画面",
     },
     {
-      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='600' viewBox='0 0 300 600'%3E%3Crect width='300' height='600' fill='%23f8f9fa'/%3E%3Crect x='20' y='50' width='260' height='60' rx='30' fill='%234f46e5'/%3E%3Ctext x='150' y='85' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3Eプロフィール%3C/text%3E%3Ccircle cx='150' cy='180' r='40' fill='%23ddd6fe'/%3E%3Ctext x='150' y='250' text-anchor='middle' fill='%234f46e5' font-family='Arial' font-size='16' font-weight='bold'%3E田中 太郎%3C/text%3E%3Ctext x='150' y='280' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='14'%3E工学部 3年生%3C/text%3E%3C/svg%3E",
+      src: campuslink3,
+      title: "ランダムマッチング画面",
+      description: "ランダムマッチング",
+    },
+    {
+      src: campuslink4,
+      title: "掲示板画面",
+      description: "掲示板画面",
+    },
+    {
+      src: campuslink5,
+      title: "ホーム画面",
+      description: "ホーム画面",
+    },
+    {
+      src: campuslink6,
       title: "プロフィール画面",
-      description: "詳細な自己紹介と興味・関心の管理",
+      description: "プロフィール画面",
     },
   ],
   links: {
-    privacyPolicy: "/campuslink/privacypolicy",
-    termsOfService: "/campuslink/termsofservice",
+    privacyPolicy: "/shuveloperpage/campuslink/privacypolicy",
+    termsOfService: "/shuveloperpage/campuslink/termsofservice",
   },
 };
