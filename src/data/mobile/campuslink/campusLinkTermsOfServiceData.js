@@ -1,5 +1,5 @@
 export const campusLinkTermsOfServiceData = {
-  title: "🎓 キャンパスリンク",
+  title: "🎓 大学リンク",
   subtitle: "利用規約",
   establishedDate: "2025年8月18日",
   lastUpdatedDate: "2025年8月18日",
@@ -12,7 +12,7 @@ export const campusLinkTermsOfServiceData = {
       id: 1,
       title: "第1条（適用）",
       content:
-        "本利用規約（以下「本規約」）は、「キャンパスリンク」（以下「本サービス」）の利用条件を定めるものです。ユーザーは、本サービスを利用することで、本規約に同意したものとみなします。",
+        "本利用規約（以下「本規約」）は、「大学リンク」（以下「本サービス」）の利用条件を定めるものです。ユーザーは、本サービスを利用することで、本規約に同意したものとみなします。",
     },
     {
       id: 2,

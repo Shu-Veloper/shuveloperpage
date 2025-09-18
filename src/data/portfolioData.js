@@ -48,7 +48,7 @@ export const projects = {
     },
     {
       id: 5,
-      title: "キャンパスリンク",
+      title: "大学リンク",
       slug: "campuslink",
       category: "モバイルアプリ",
       image: campuslinkIcon,

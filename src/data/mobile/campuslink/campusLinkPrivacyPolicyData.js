@@ -1,8 +1,8 @@
 export const campusLinkPrivacyPolicyData = {
-  title: "🎓 キャンパスリンク",
+  title: "🎓 大学リンク",
   subtitle: "プライバシーポリシー",
-  establishedDate: "2025年8月18日",
-  lastUpdatedDate: "2025年8月18日",
+  establishedDate: "2025年9月16日",
+  lastUpdatedDate: "2025年9月16日",
   developer: {
     name: "shuveloper",
     email: "shuveloper0308@gmail.com",
@@ -13,7 +13,7 @@ export const campusLinkPrivacyPolicyData = {
       id: 1,
       title: "第1条（はじめに）",
       content:
-        "「キャンパスリンク」（以下「本サービス」）は、ユーザーの個人情報保護を重要視しています。本プライバシーポリシーは、個人情報の収集、利用、管理について説明します。",
+        "「大学リンク」（以下「本サービス」）は、ユーザーの個人情報保護を重要視しています。本プライバシーポリシーは、個人情報の収集、利用、管理について説明します。",
     },
     {
       id: 2,
@@ -26,6 +26,8 @@ export const campusLinkPrivacyPolicyData = {
         "自己紹介文、興味・関心、MBTI性格タイプ",
         "マッチング履歴とチャットメッセージ",
         "アプリ利用ログとデバイス情報",
+        "広告識別子（IDFA/Android Advertising ID）",
+        "Firebase Analytics利用データ",
       ],
       notCollectInfo: [
         "住所や電話番号などの個人識別情報",
@@ -44,6 +46,8 @@ export const campusLinkPrivacyPolicyData = {
         "サービスの改善と最適化",
         "技術的な問題の解決",
         "安全性の確保と不正利用の防止",
+        "パーソナライズされた広告の配信",
+        "アプリの利用状況分析",
       ],
     },
     {
@@ -53,7 +57,8 @@ export const campusLinkPrivacyPolicyData = {
       list: [
         {
           title: "アカウントデータ：",
-          description: "Firebase Cloud Firestoreに暗号化して保存、退会後30日間保持",
+          description:
+            "Firebase Cloud Firestoreに暗号化して保存、退会後30日間保持",
         },
         {
           title: "チャットデータ：",
@@ -71,9 +76,38 @@ export const campusLinkPrivacyPolicyData = {
     },
     {
       id: 5,
-      title: "第5条（第三者への提供）",
+      title: "第5条（第三者への提供・外部サービス）",
       content:
-        "本サービスは、以下の場合を除き、お客様の個人情報を第三者に提供することはありません。ユーザーの同意がある場合、法令に基づく場合、人の生命・身体等の保護に必要な場合。",
+        "本サービスは、以下の第三者サービスを利用しており、これらのサービスに必要な情報を提供することがあります：",
+      list: [
+        {
+          title: "Google Firebase：",
+          description: "認証、データベース、アナリティクス、メッセージング機能",
+        },
+        {
+          title: "Google AdMob：",
+          description: "広告配信（広告識別子等を使用）",
+        },
+        {
+          title: "その他の第三者提供：",
+          description:
+            "ユーザーの同意がある場合、法令に基づく場合、人の生命・身体等の保護に必要な場合のみ",
+        },
+      ],
+      externalLinks: [
+        {
+          service: "Googleプライバシーポリシー",
+          url: "https://policies.google.com/privacy",
+        },
+        {
+          service: "Firebase利用規約",
+          url: "https://firebase.google.com/terms/",
+        },
+        {
+          service: "AdMobプライバシーポリシー",
+          url: "https://support.google.com/admob/answer/6128543",
+        },
+      ],
     },
     {
       id: 6,
@@ -84,6 +118,7 @@ export const campusLinkPrivacyPolicyData = {
         "Cloud Firestoreでの暗号化データ保存",
         "HTTPS通信による情報の暗号化",
         "アクセス制御とセキュリティ監査の実施",
+        "定期的なセキュリティアップデートの実施",
       ],
     },
     {
@@ -95,25 +130,42 @@ export const campusLinkPrivacyPolicyData = {
         "プライバシー設定をいつでも変更する権利",
         "個人情報の利用停止を求める権利",
         "本プライバシーポリシーについて質問する権利",
+        "広告のパーソナライゼーションを無効にする権利（端末設定から）",
       ],
     },
     {
       id: 8,
-      title: "第8条（未成年者のプライバシー）",
-      content:
-        "本サービスは18歳未満のお客様の利用には保護者の同意が必要です。18歳未満の方の個人情報については、保護者の監督の下で適切に取り扱います。",
+      title: "第8条（Cookie・類似技術）",
+      content: "本サービスでは、サービス向上のため以下の技術を使用します：",
+      list: [
+        "Firebase Analytics：アプリ利用状況の分析",
+        "ローカルストレージ：設定情報の保存",
+        "プッシュ通知トークン：通知配信のため",
+      ],
     },
     {
       id: 9,
-      title: "第9条（プライバシーポリシーの変更）",
+      title: "第9条（未成年者のプライバシー）",
       content:
-        "本プライバシーポリシーを変更する場合は、アプリ内で通知いたします。継続してサービスをご利用いただくことで、変更に同意したものとみなします。",
+        "本サービスは18歳以上の大学生を対象としています。18歳未満の方のご利用には保護者の同意が必要です。意図せず18歳未満の方の情報を収集した場合は、速やかに削除いたします。",
     },
     {
       id: 10,
-      title: "第10条（お問い合わせ）",
+      title: "第10条（国際的なデータ転送）",
       content:
-        "プライバシーに関するご質問やご意見は、以下の連絡先までお気軽にお問い合わせください：",
+        "本サービスはGoogleのクラウドサービスを利用しており、お客様のデータは適切なセキュリティ対策の下、国外のデータセンターに保存される場合があります。Googleは国際的なデータ保護基準に準拠しています。",
+    },
+    {
+      id: 11,
+      title: "第11条（プライバシーポリシーの変更）",
+      content:
+        "本プライバシーポリシーを変更する場合は、アプリ内で通知いたします。重要な変更の場合は、メール等でお知らせします。継続してサービスをご利用いただくことで、変更に同意したものとみなします。",
+    },
+    {
+      id: 12,
+      title: "第12条（お問い合わせ）",
+      content:
+        "プライバシーに関するご質問やご意見、データの削除要請は、以下の連絡先までお気軽にお問い合わせください：",
     },
   ],
 };

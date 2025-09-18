@@ -6,14 +6,14 @@ import campuslink5 from "../../../assets/images/campuslink/campuslink5.png";
 import campuslink6 from "../../../assets/images/campuslink/campuslink6.png";
 
 export const campusLinkData = {
-  title: "キャンパスリンク",
+  title: "大学リンク",
   slug: "campuslink",
   category: "モバイルアプリ",
   link: "campuslink",
   description:
     "大学内での新しい出会いとつながりを促進するマッチングアプリ。同じキャンパス内の学生同士が安全で楽しいコミュニケーションを楽しめます。",
   longDescription:
-    "キャンパスリンクは、同じ大学に通う学生同士の新しい出会いとコミュニケーションを促進するために開発されたマッチングアプリケーションです。相性診断システムと安全な認証機能により、信頼できる環境での交流を実現します。友達探しから恋愛まで、様々な形での出会いをサポートし、充実したキャンパスライフを応援します。",
+    "大学リンクは、同じ大学に通う学生同士の新しい出会いとコミュニケーションを促進するために開発されたマッチングアプリケーションです。相性診断システムと安全な認証機能により、信頼できる環境での交流を実現します。友達探しから恋愛まで、様々な形での出会いをサポートし、充実したキャンパスライフを応援します。",
   tech: [
     "Flutter",
     "Dart",
