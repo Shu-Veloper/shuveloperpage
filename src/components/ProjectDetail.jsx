@@ -149,7 +149,7 @@ const ProjectDetail = ({ projectData }) => {
               {projectData.links.privacyPolicy && (
                 <a
                   href={projectData.links.privacyPolicy}
-                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-blue-500 text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-blue-600"
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
                 >
                   プライバシーポリシー
                 </a>
@@ -157,15 +157,39 @@ const ProjectDetail = ({ projectData }) => {
               {projectData.links.termsOfService && (
                 <a
                   href={projectData.links.termsOfService}
-                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-white text-blue-500 no-underline rounded-xl text-sm md:text-xs font-semibold border-2 border-blue-500 transition-all duration-300 hover:bg-blue-500 hover:text-white"
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
                 >
                   利用規約
+                </a>
+              )}
+              {projectData.links.support && (
+                <a
+                  href={projectData.links.support}
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
+                >
+                  サポート
+                </a>
+              )}
+              {projectData.links.accountDeletion && (
+                <a
+                  href={projectData.links.accountDeletion}
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
+                >
+                  アカウント削除
+                </a>
+              )}
+              {projectData.links.safety && (
+                <a
+                  href={projectData.links.safety}
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
+                >
+                  安全性
                 </a>
               )}
               {projectData.links.github && (
                 <a
                   href={projectData.links.github}
-                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-blue-500 text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-blue-600"
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
                 >
                   GitHub
                 </a>
@@ -173,7 +197,7 @@ const ProjectDetail = ({ projectData }) => {
               {projectData.links.demo && (
                 <a
                   href={projectData.links.demo}
-                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-blue-500 text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-blue-600"
+                  className="block text-center px-5 py-4 md:px-4 md:py-3 bg-black text-white no-underline rounded-xl text-sm md:text-xs font-semibold transition-all duration-300 hover:bg-gray-800"
                 >
                   デモ
                 </a>

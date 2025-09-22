@@ -189,7 +189,43 @@ export default function PrivacyPolicy({ data }) {
             </ul>
           </div>
         );
-      case 10: // お問い合わせ
+      case 5: // 第三者への提供・外部サービス
+        return (
+          <div style={styles.articleContent}>
+            {article.content}
+            {article.list && (
+              <ul style={styles.infoList}>
+                {article.list.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    isLast={index === article.list.length - 1}
+                  >
+                    {typeof item === 'string' ? item : (
+                      <>
+                        <strong>{item.title}</strong> {item.description}
+                      </>
+                    )}
+                  </ListItem>
+                ))}
+              </ul>
+            )}
+            {article.externalLinks && (
+              <div style={styles.highlightBox}>
+                <h4 style={styles.highlightTitle}>🔗 関連リンク</h4>
+                <ul style={styles.infoList}>
+                  {article.externalLinks.map((link, index) => (
+                    <li key={index} style={{ ...styles.listItem, ...(index === article.externalLinks.length - 1 ? styles.listItemLast : {}) }}>
+                      <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ color: '#4f46e5', textDecoration: 'none' }}>
+                        {link.service}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        );
+      case 12: // お問い合わせ
         return (
           <div style={styles.articleContent}>
             {article.content}
@@ -217,7 +253,11 @@ export default function PrivacyPolicy({ data }) {
                     key={index}
                     isLast={index === article.list.length - 1}
                   >
-                    {item}
+                    {typeof item === 'string' ? item : (
+                      <>
+                        <strong>{item.title}</strong> {item.description}
+                      </>
+                    )}
                   </ListItem>
                 ))}
               </ul>

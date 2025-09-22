@@ -29,6 +29,11 @@ export const campusLinkData = {
     "興味・関心によるフィルタリング",
     "MBTI性格診断連携",
     "プライバシー保護機能",
+    "部適切なコンテンツ報告システム",
+    "ユーザーブロック機能",
+    "24時間以内の報告処理",
+    "アカウント完全削除機能",
+    "コンテンツフィルタリング",
   ],
   screenshots: [
     {
@@ -65,5 +70,8 @@ export const campusLinkData = {
   links: {
     privacyPolicy: "/shuveloperpage/campuslink/privacypolicy",
     termsOfService: "/shuveloperpage/campuslink/termsofservice",
+    support: "/shuveloperpage/campuslink/support",
+    accountDeletion: "/shuveloperpage/campuslink/account-deletion",
+    safety: "/shuveloperpage/campuslink/safety",
   },
 };
